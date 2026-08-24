@@ -1,0 +1,1079 @@
+/* =========================================================
+   SWAMINI PURE VEG
+   JADHAV FOOD COURT — MENU PAGE
+   Premium / Warm / Editorial
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f6f3ed;
+    color: #171510;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.swamini-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 82px;
+
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(246, 243, 237, 0.94);
+
+    border-bottom: 1px solid rgba(23, 21, 16, 0.08);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+
+/* BRAND */
+
+.swamini-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.swamini-brand img {
+    width: 46px;
+    height: 46px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.swamini-brand div {
+    display: flex;
+    flex-direction: column;
+}
+
+.swamini-brand strong {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.swamini-brand small {
+    margin-top: 3px;
+
+    color: #8c8477;
+
+    font-size: 7px;
+    letter-spacing: 2.5px;
+}
+
+
+/* BACK BUTTON */
+
+.swamini-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 17px;
+
+    border: 1px solid #d6cfc3;
+    border-radius: 50px;
+
+    color: #5f594f;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease;
+}
+
+.swamini-back span {
+    font-size: 16px;
+}
+
+.swamini-back:hover {
+    background: #a47738;
+    border-color: #a47738;
+    color: white;
+
+    transform: translateX(-3px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.swamini-hero {
+    position: relative;
+
+    min-height: 570px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 20px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(164, 119, 56, .10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(164, 119, 56, .08),
+            transparent 30%
+        ),
+        #f6f3ed;
+}
+
+
+/* DECORATIVE CIRCLE */
+
+.swamini-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 580px;
+    height: 580px;
+
+    border: 1px solid rgba(164, 119, 56, .15);
+
+    border-radius: 50%;
+
+    top: -290px;
+    left: -170px;
+}
+
+.swamini-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    border: 1px solid rgba(164, 119, 56, .12);
+
+    border-radius: 50%;
+
+    right: -150px;
+    bottom: -220px;
+}
+
+
+/* HERO CONTENT */
+
+.swamini-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+}
+
+
+/* KICKER */
+
+.swamini-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+
+    color: #a47738;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.swamini-kicker::before,
+.swamini-kicker::after {
+    content: "";
+
+    width: 32px;
+    height: 1px;
+
+    background: #a47738;
+}
+
+
+/* HERO TITLE */
+
+.swamini-hero h1 {
+    margin-top: 24px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(72px, 10vw, 125px);
+
+    line-height: .83;
+
+    font-weight: 500;
+
+    letter-spacing: -6px;
+}
+
+.swamini-hero h1 em {
+    display: block;
+
+    margin-top: 15px;
+
+    color: #a47738;
+
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+/* DESCRIPTION */
+
+.swamini-hero p {
+    max-width: 500px;
+
+    margin: 35px auto 0;
+
+    color: #777066;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* MARATHI NOTE */
+
+.swamini-hero-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 32px;
+
+    color: #5f594f;
+
+    font-size: 12px;
+}
+
+.swamini-hero-note span {
+    width: 28px;
+    height: 1px;
+
+    background: #a47738;
+}
+
+.swamini-hero-note strong {
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MENU SECTION
+========================================================= */
+
+.swamini-menu-section {
+    width: 90%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 80px 0 120px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.swamini-section-heading {
+    max-width: 720px;
+
+    margin-bottom: 80px;
+}
+
+.swamini-section-heading > span {
+    color: #a47738;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.swamini-section-heading h2 {
+    margin-top: 15px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(50px, 7vw, 82px);
+
+    line-height: .95;
+
+    font-weight: 500;
+
+    letter-spacing: -4px;
+}
+
+.swamini-section-heading h2 em {
+    color: #a47738;
+
+    font-style: italic;
+    font-weight: 400;
+}
+
+.swamini-section-heading p {
+    max-width: 520px;
+
+    margin-top: 25px;
+
+    color: #777066;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   MENU CATEGORY
+========================================================= */
+
+.swamini-menu-category {
+    padding: 55px 0 65px;
+
+    border-top: 1px solid #ddd6ca;
+}
+
+.swamini-menu-category:last-child {
+    border-bottom: 1px solid #ddd6ca;
+}
+
+
+/* CATEGORY HEADING */
+
+.category-heading {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 22px;
+
+    margin-bottom: 35px;
+}
+
+.category-heading > span {
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #d5cec2;
+
+    border-radius: 50%;
+
+    color: #a47738;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 15px;
+}
+
+.category-heading small {
+    display: block;
+
+    color: #a47738;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+}
+
+.category-heading h3 {
+    margin-top: 7px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 39px;
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: -1.5px;
+}
+
+
+/* =========================================================
+   MENU GRID
+========================================================= */
+
+.swamini-menu-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px 22px;
+}
+
+
+/* =========================================================
+   MENU CARD
+========================================================= */
+
+.swamini-menu-card {
+    min-height: 125px;
+
+    padding: 25px 26px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    background: #fff;
+
+    border: 1px solid rgba(23, 21, 16, .07);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(40, 30, 15, .045);
+
+    transition:
+        transform .4s cubic-bezier(.22, 1, .36, 1),
+        box-shadow .4s ease,
+        border-color .4s ease;
+}
+
+.swamini-menu-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(164, 119, 56, .28);
+
+    box-shadow:
+        0 18px 40px rgba(40, 30, 15, .09);
+}
+
+
+/* ITEM NAME */
+
+.swamini-menu-card h4 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+
+    line-height: 1.15;
+
+    font-weight: 500;
+}
+
+
+/* ITEM DESCRIPTION */
+
+.swamini-menu-card p {
+    max-width: 420px;
+
+    margin-top: 8px;
+
+    color: #81796e;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* PRICE */
+
+.swamini-menu-card > strong {
+    flex-shrink: 0;
+
+    color: #a47738;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.swamini-cta {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 120px 20px;
+
+    background: #171510;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+/* DECORATIVE CIRCLES */
+
+.swamini-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 50%;
+
+    top: -330px;
+    left: -160px;
+}
+
+.swamini-cta::after {
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    border: 1px solid rgba(255,255,255,.07);
+
+    border-radius: 50%;
+
+    right: -150px;
+    bottom: -290px;
+}
+
+
+/* CTA CONTENT */
+
+.swamini-cta > span,
+.swamini-cta h2,
+.swamini-cta p,
+.swamini-cta a {
+    position: relative;
+
+    z-index: 2;
+}
+
+.swamini-cta > span {
+    color: #d1a661;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+/* CTA HEADING */
+
+.swamini-cta h2 {
+    max-width: 850px;
+
+    margin: 20px auto 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 7vw, 78px);
+
+    line-height: .95;
+
+    font-weight: 500;
+
+    letter-spacing: -3px;
+}
+
+.swamini-cta h2 em {
+    color: #d1a661;
+
+    font-style: italic;
+
+    font-weight: 400;
+}
+
+
+/* CTA DESCRIPTION */
+
+.swamini-cta p {
+    max-width: 540px;
+
+    margin: 28px auto 0;
+
+    color: rgba(255,255,255,.62);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* CTA BUTTON */
+
+.swamini-cta a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+    padding: 8px 9px 8px 21px;
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition:
+        background .3s ease,
+        border-color .3s ease,
+        transform .3s ease;
+}
+
+.swamini-cta a b {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #a47738;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        color .3s ease;
+}
+
+.swamini-cta a:hover {
+    background: rgba(255,255,255,.07);
+
+    border-color: #a47738;
+
+    transform: translateY(-3px);
+}
+
+.swamini-cta a:hover b {
+    transform: rotate(45deg);
+
+    background: white;
+
+    color: #a47738;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.swamini-footer {
+    min-height: 110px;
+
+    padding: 30px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background: #11100d;
+
+    color: white;
+}
+
+
+/* FOOTER BRAND */
+
+.swamini-footer > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.swamini-footer strong {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.swamini-footer small {
+    margin-top: 4px;
+
+    color: #a47738;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+
+/* FOOTER TEXT */
+
+.swamini-footer p {
+    color: #777168;
+
+    font-size: 10px;
+}
+
+
+/* FOOTER LINK */
+
+.swamini-footer > a {
+    color: #d1a661;
+
+    font-size: 11px;
+
+    transition: opacity .3s ease;
+}
+
+.swamini-footer > a:hover {
+    opacity: .6;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .swamini-navbar {
+        padding: 0 6%;
+    }
+
+
+    .swamini-hero {
+        min-height: 520px;
+    }
+
+
+    .swamini-menu-section {
+        width: 88%;
+
+        padding-top: 70px;
+    }
+
+
+    .swamini-menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .swamini-menu-card {
+        min-height: 115px;
+    }
+
+
+    .swamini-footer {
+        padding: 30px 6%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+
+    .swamini-navbar {
+        height: 70px;
+
+        padding: 0 5%;
+    }
+
+    .swamini-brand img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .swamini-brand strong {
+        font-size: 12px;
+    }
+
+    .swamini-brand small {
+        font-size: 6px;
+        letter-spacing: 2px;
+    }
+
+    .swamini-back {
+        padding: 9px 12px;
+
+        font-size: 9px;
+    }
+
+    .swamini-back span {
+        font-size: 14px;
+    }
+
+
+    /* HERO */
+
+    .swamini-hero {
+        min-height: 480px;
+
+        padding:
+            80px
+            20px
+            70px;
+    }
+
+    .swamini-hero h1 {
+        font-size: 68px;
+
+        letter-spacing: -3px;
+    }
+
+    .swamini-hero p {
+        margin-top: 28px;
+
+        font-size: 14px;
+    }
+
+    .swamini-hero-note {
+        font-size: 10px;
+    }
+
+
+    /* MENU */
+
+    .swamini-menu-section {
+        width: 88%;
+
+        padding:
+            65px
+            0
+            85px;
+    }
+
+    .swamini-section-heading {
+        margin-bottom: 55px;
+    }
+
+    .swamini-section-heading h2 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+
+    /* CATEGORY */
+
+    .swamini-menu-category {
+        padding: 40px 0 50px;
+    }
+
+    .category-heading {
+        gap: 14px;
+
+        margin-bottom: 25px;
+    }
+
+    .category-heading > span {
+        width: 36px;
+        height: 36px;
+
+        font-size: 13px;
+    }
+
+    .category-heading small {
+        font-size: 8px;
+    }
+
+    .category-heading h3 {
+        font-size: 29px;
+
+        letter-spacing: -1px;
+    }
+
+
+    /* CARDS */
+
+    .swamini-menu-grid {
+        gap: 12px;
+    }
+
+    .swamini-menu-card {
+        min-height: 105px;
+
+        padding: 20px;
+
+        border-radius: 15px;
+
+        gap: 15px;
+    }
+
+    .swamini-menu-card h4 {
+        font-size: 20px;
+    }
+
+    .swamini-menu-card p {
+        font-size: 11px;
+    }
+
+    .swamini-menu-card > strong {
+        font-size: 14px;
+    }
+
+
+    /* CTA */
+
+    .swamini-cta {
+        padding:
+            90px
+            20px;
+    }
+
+    .swamini-cta h2 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+    .swamini-cta p {
+        font-size: 13px;
+    }
+
+
+    /* FOOTER */
+
+    .swamini-footer {
+        padding: 30px 6%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .swamini-brand strong {
+        font-size: 11px;
+    }
+
+    .swamini-back {
+        padding: 8px 10px;
+    }
+
+
+    .swamini-hero {
+        min-height: 440px;
+    }
+
+    .swamini-hero h1 {
+        font-size: 56px;
+
+        letter-spacing: -2px;
+    }
+
+    .swamini-hero p {
+        font-size: 13px;
+    }
+
+
+    .swamini-section-heading h2 {
+        font-size: 43px;
+    }
+
+
+    .category-heading h3 {
+        font-size: 26px;
+    }
+
+
+    .swamini-menu-card {
+        padding: 18px;
+    }
+
+    .swamini-menu-card h4 {
+        font-size: 18px;
+    }
+
+
+    .swamini-cta h2 {
+        font-size: 42px;
+    }
+
+}
